@@ -1,0 +1,102 @@
+/* ===== RESET ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary); /* var() uses the variable defined in the root */
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ===== HEADING ===== */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ===== FORM CONTAINER ===== */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+label {
+    display: block; /* makes label take up the full width of its container */
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* ===== FORM INPUTS ===== */
+input,
+select,
+textarea {
+    display: block;
+    width: 90%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.2);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-light);
+}
+
+/* ===== COLOR PALETTE ===== */
+:root {
+    --primary-color: #2c5282;      /* Deep blue - trust, professionalism */
+    --primary-light: #4a7ab8;      /* Lighter blue for hover states */
+    --background: #f7fafc;         /* Very light gray-blue */
+    --surface: #ffffff;            /* White for form areas */
+    --text-primary: #1a202c;       /* Near-black for main text */
+    --text-secondary: #4a5568;     /* Gray for secondary text */
+    --border-color: #cbd5e0;       /* Light gray for borders */
+    --error: #c53030;              /* Red for errors */
+    --success: #276749;            /* Green for success */
+}
+/* root targets the entire document */
+/* --name creates reusable variables */
