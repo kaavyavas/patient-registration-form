@@ -10,7 +10,9 @@
 
     <body>
         <h1>Patient Registration Form</h1>
-        <form>
+        <form id="myForm" novalidate> <!-- nvalidate tells browser to not validate the form, we'll do that ourselves with javascript-->
+            <div id="errorContainer"></div> <!-- container / frame -->
+            <div id="successContainer"></div> <!-- container / frame -->
             <fieldset>
                 <legend>Personal Information</legend>
                 <label for="firstName">First Name: </label> <!--describes input-->
@@ -72,5 +74,6 @@
             </fieldset>
             <button type="submit">Submit Registration</button>
         </form>
+        <script src="script.js"></script> <!-- javascript file for form validation ; need to load html file first -->
     </body>
 </html>
